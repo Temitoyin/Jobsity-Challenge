@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Provider as ReduxProvider } from "react-redux";
 
+import ContextWrapper from "./context/ContextWrapper/ContextWrapper";
 import Main from "./Main";
 import reducers from "./reducers";
 import reportWebVitals from "./reportWebVitals";
@@ -13,7 +14,9 @@ import "./sass/app.scss";
 ReactDOM.render(
   <React.StrictMode>
     <ReduxProvider store={getStore(reducers)}>
-      <Main />
+      <ContextWrapper>
+        <Main />
+      </ContextWrapper>
     </ReduxProvider>
   </React.StrictMode>,
   document.getElementById("root")

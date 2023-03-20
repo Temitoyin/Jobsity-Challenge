@@ -1,0 +1,64 @@
+.day{
+    border: 0.063rem solid grey;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: 6rem;
+    padding: 0.188rem 0rem 0rem 0.188rem;
+    &_header{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    &_currentDate{
+        align-items: center;
+        background-color: #3074B5;
+        border-radius: 50%;
+        color: white;
+        display: flex;
+        font-size: 0.75rem;
+        height: 1.688rem;
+        justify-content: center;
+        text-align: center;
+        width: 1.688rem;
+    }
+
+    & > div{
+        display: flex;
+        flex: 1;
+    }
+    &_labelWrapper{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        overflow-y: hidden;
+        padding-top: 0.313rem;
+        // &::-webkit-scrollbar {
+        //         background-color: transparent;
+        // }
+        // &::-webkit-scrollbar-thumb {
+        //     background-color: transparent;
+        // }
+                
+        &:hover{
+            overflow-y: scroll;
+        }
+    }
+    &_label{
+        background-color: #cf8dff;
+        border-radius: 0.188rem;
+        font-size: 0.75rem;
+        flex-shrink: 0;
+        height: 1.25rem;
+        margin-bottom: 0.125rem;     
+        overflow: hidden;
+        padding: 0.125rem;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 7.575rem;
+    }
+    &_overFlowIcon{
+        position: absolute;
+        bottom: 0;
+    }
+}

@@ -1,0 +1,47 @@
+.smallCalender{
+    margin-top: 0.625rem;
+    &_header{
+        display: flex;
+        justify-content: space-between;
+    }
+    &_content{
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        .dayOfTheWeek{
+            text-align: center;
+        }
+        .activeDate{
+            color: white;
+            span {
+                background-color: #5cd0f7;
+                border-radius: 50%;
+                }
+        }
+        .selectedDate{
+            color: rgb(0, 96, 251);
+            font-weight: 500;
+            span{
+                background-color: #89e1fe;
+                border-radius: 50%;
+            }
+        }
+        button{
+            background-color: transparent;
+            border: 0;
+            display: flex;
+            justify-content: center;
+            padding: 0.188rem;
+            text-align: center;
+            cursor: pointer;
+            span{
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            height: 1.563rem;
+            width: 1.563rem
+            }
+        }
+    }
+}

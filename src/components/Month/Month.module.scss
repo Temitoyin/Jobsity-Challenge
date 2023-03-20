@@ -1,0 +1,19 @@
+.month{
+    &_header{
+    background-color: #3074B5;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    padding: 0.188rem;
+    span{
+        color: white;
+        text-align: center;
+    }
+    }
+    
+    &_content{
+        border: 0.063rem solid grey;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+    }
+}
