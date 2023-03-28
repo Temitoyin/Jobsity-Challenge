@@ -21,7 +21,7 @@ export const Calender = () => {
     <div className={styles.calender}>
       {showReminderModal && <ReminderModal />}
       <Header />
-      <Month month={currentMonth} />
+      <Month month={currentMonth} monthIndex={monthIndex} />
     </div>
   );
 };

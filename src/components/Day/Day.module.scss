@@ -5,6 +5,16 @@
     flex-direction: column;
     height: 6rem;
     padding: 0.188rem 0rem 0rem 0.188rem;
+    &_date{
+        font-weight: 500;
+        color: black;
+        &Odd{
+            color: grey;
+        }
+        &Weekend{
+            color: #3074B5;
+        }
+    }
     &_header{
         align-items: center;
         display: flex;
@@ -56,6 +66,9 @@
         text-overflow: ellipsis;
         white-space: nowrap;
         width: 7.575rem;
+        &OddMonth{
+            color: gray;
+        }
     }
     &_overFlowIcon{
         position: absolute;

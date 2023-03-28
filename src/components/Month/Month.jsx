@@ -9,7 +9,7 @@ import styles from "./Month.module.scss";
  * @param {Array} month the month array containing the weeks and days
  * @returns {React.Component} Calender Header component
  */
-const Month = ({ month }) => {
+const Month = ({ month, monthIndex }) => {
   return (
     <div className={styles.month}>
       <div className={styles.month_header}>
@@ -25,7 +25,12 @@ const Month = ({ month }) => {
               {row &&
                 isNotEmptyArray(row) &&
                 row.map((day, index) => (
-                  <Day day={day} key={index} rowIdx={i} />
+                  <Day
+                    day={day}
+                    key={index}
+                    rowIdx={i}
+                    monthIndex={monthIndex}
+                  />
                 ))}
             </React.Fragment>
           ))}

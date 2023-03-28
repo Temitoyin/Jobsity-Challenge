@@ -3,14 +3,14 @@ import React, { useState, useContext, useEffect } from "react";
 import dayjs from "dayjs";
 
 import GlobalContext from "../../context/GlobalContext/GlobalContext";
-import { composeClasses, isNotEmptyArray } from "../../utils/utils";
+import { composeClasses } from "../../utils/utils";
 import styles from "./Day.module.scss";
 
 /**
  * @param {object} day the day object for that day
  * @returns {React.Component} Calender component
  */
-const Day = ({ day }) => {
+const Day = ({ day, monthIndex }) => {
   const [dayEvents, setDayEvents] = useState([]);
 
   const {
@@ -34,9 +34,15 @@ const Day = ({ day }) => {
    * @returns {object} styles the styles object
    */
   const getCurrentDayClass = () => {
-    return day.format("DD-MM-YY") === dayjs().format("DD-MM-YY")
-      ? styles.day_currentDate
-      : "";
+    if (day.format("DD-MM-YY") === dayjs().format("DD-MM-YY")) {
+      return styles.day_currentDate;
+    } else if (day.$M === monthIndex && day.format("dddd").startsWith("S")) {
+      return styles.day_dateWeekend;
+    } else if (day.$M !== monthIndex) {
+      return styles.day_dateOdd;
+    } else {
+      return "";
+    }
   };
 
   /**
@@ -52,7 +58,7 @@ const Day = ({ day }) => {
   };
   return (
     <div
-      className={styles.day}
+      className={composeClasses(styles.day)}
       onClick={(e) => {
         handleReminderEvent(e, day);
       }}
@@ -63,7 +69,7 @@ const Day = ({ day }) => {
       <div className={styles.day_labelWrapper}>
         {dayEvents.map((evt, idx) => (
           <div
-            className={styles.day_label}
+            className={composeClasses(styles.day_label)}
             key={idx}
             onClick={() => setSelectedEvent(evt)}
           >
