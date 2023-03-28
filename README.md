@@ -3,48 +3,49 @@
 </div>
 
 # React Challenge
+A calender app that allows you set a reminder\
 
-A calender app that allows you set a reminder
+Live url: https://jobsity-challenge-nine.vercel.app/calendar
 
 # Packages Used
 
-dayJs: For date and time manipulation
-react-time-picker: For time selection
+dayJs: For date and time manipulation\
+react-time-picker: For time selection\
 axios: For api calls
 
 ## Features
 
-Navigate
+Navigate:\
 A user can navigate through different months of the calender
 
-Add Reminder
+Add Reminder:\
 A user can add a reminder text to the reminder modal
 
-Add City
+Add City:\
 A user can add a city to the reminder modal
 
-Add Time
+Add Time:\
 A user can add a time to the reminder modal
 
-Save
+Save:\
 A user can save a reminder
 
-Update
+Update:\
 A user can update a reminder by either changing the reminder text, time, city or date
 
-Delete
+Delete:\
 A user can delete a reminder
 
-Rest
+Rest:\
 A user can reset the calender to the current month
 
 ## Instructions
 
-To update the date of a selected reminder, click on the date in the reminder modal
-To save a reminder click on the save button
-To delete a reminder click on the trash icon at the top left
-To reset the calender click on the "Today" button on the header
-For dates with multiple reminders, hover and scroll to see the rest of the reminders
+To update the date of a selected reminder, click on the date in the reminder modal\
+To save a reminder click on the save button\
+To delete a reminder click on the trash icon at the top left\
+To reset the calender click on the "Today" button on the header\
+For dates with multiple reminders, hover and scroll to see the rest of the reminders\
 
 ## Styles
 
